@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OperatorWindow</class>
+ <widget class="QWidget" name="OperatorWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Workplace [Operator]</string>
+  </property>
+  <layout class="QVBoxLayout" name="windowLayout" stretch="10,0,1">
+   <item>
+    <layout class="QVBoxLayout" name="y_layout"/>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttons_layout">
+     <item>
+      <widget class="QPushButton" name="start_button">
+       <property name="text">
+        <string>Start Truck</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>start_button</sender>
+   <signal>pressed()</signal>
+   <receiver>OperatorWindow</receiver>
+   <slot>manipulate_timer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>599</x>
+     <y>752</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>599</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>manipulate_timer()</slot>
+ </slots>
+</ui>

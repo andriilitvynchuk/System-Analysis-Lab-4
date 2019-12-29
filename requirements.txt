@@ -1,0 +1,9 @@
+numpy
+SIP
+PyQt5
+scipy
+matplotlib
+pyinstaller
+tabulate
+statsmodels
+xlrd
