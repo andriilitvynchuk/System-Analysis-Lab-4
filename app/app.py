@@ -1,6 +1,6 @@
 import matplotlib
 matplotlib.use("Qt5Agg", force=True)
-
+import os
 import sys
 
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, Qt
@@ -43,6 +43,8 @@ class MainWindow(QDialog, Ui_Form):
             self.type = 'sh_cheb_2'
         self.custom_func_struct = self.custom_check.isChecked()
         self.input_path = self.line_input.text()
+        if len(self.input_path) == 0:
+            self.input_path = os.path.join("data", "reanim_avar.xlsx")
         self.output_path = './output.xlsx'
         self.samples_num = self.sample_spin.value()
         # self.lambda_multiblock = self.lambda_check.isChecked()
@@ -55,7 +57,7 @@ class MainWindow(QDialog, Ui_Form):
         #set tablewidget
         self.tablewidget.verticalHeader().hide()
         self.tablewidget.setRowCount(0)
-        column_size = [60, 70, 100, 100,200, 60, 200,80]
+        column_size = [60, 70, 100, 100,200, 60, 200, 80]
         for index, size in enumerate(column_size):
              self.tablewidget.setColumnWidth(index,size)
         return

@@ -380,7 +380,7 @@ class Ui_Form(object):
         self.groupBox.setTitle(_translate("Form", "ДАНІ"))
         # self.line_output.setPlaceholderText(_translate("Form", "Вихідний файл"))
         # self.select_output.setText(_translate("Form", "..."))
-        self.line_input.setPlaceholderText(_translate("Form", "Вхідний файл"))
+        self.line_input.setPlaceholderText(_translate("Form", "Шлях до файлу"))
         self.select_input.setText(_translate("Form", "..."))
         item = self.tablewidget.horizontalHeaderItem(0)
         # item.setStretchLastSection(True)
@@ -395,7 +395,7 @@ class Ui_Form(object):
         item.setText(_translate("Form", "Стан\n"
 "фунціонування"))
         item = self.tablewidget.horizontalHeaderItem(5)
-        item.setText(_translate("Form", "Функція \n ризику"))
+        item.setText(_translate("Form", "Ймовірність \n аварії"))
         item = self.tablewidget.horizontalHeaderItem(6)
         item.setText(_translate("Form", "Причина\n"
 "нештатної\n"
